@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <head>
+        <meta charset="utf-8">
+        <title>MH-VPS</title>
+        <link rel="stylesheet" href="style3.css">
+
+    </head>
+    <body>
+        <header>
+            <img src="images/logo.png" class="logo-header">
+            <ul class="navbar">
+                <li><a href="index.html">Почетна</a></li>
+                <li><a href="productpage.html">Производи</a>
+                    <ul class="dropdown">
+                        <li><a href="webhost.html">WebHost</a></li>
+                        <li><a href="gamehost.html">GameHost</a></li>
+                        <li><a href="vps.html">VPS</a></li>
+                    </ul>
+                </li>
+                <li><a href="survey.html">Анкета</a></li>
+                <li><a href="contact.html">Контакт</a></li>
+            </ul>
+        </header>
+        <br><br><br><br><br><br><br><br><br>
+        <main>
+            <div class="product-container">
+                <div class="product-grid">
+                    <div class="product" id="product7">
+                        <img src="images/vps-small.png" alt="Product 7">
+                        <h2>VPS S</h2>
+                        <p>
+    
+                            3GB простор
+                            <br>
+                            1 Домен
+                            <br>
+                            500GB месечен сообраќај
+                            <br>
+                            Неограничено емаил адреси
+                            <br>
+                            Бесплатен сертификат
+                            
+                        </p>
+                        <br>
+                        <button class="buy-button" onclick="buyProduct('product7')">Купи</button>
+                        <button class="like-button" onclick="toggleLike('product7')">Like</button>
+                        <span class="like-count">0</span>
+                        <div class="comment-section">
+                            <textarea class="comment-text" placeholder="Оставете коментар за производот..."></textarea>
+                            <button class="submit-comment" onclick="submitComment('product7')">Коментирај</button>
+                            <div class="comments"></div>
+                        </div>
+                    </div>
+        
+         
+                    <div class="product" id="product8">
+                        <img src="images/vps-medium.png" alt="Product 8">
+                        <h2>VPS M</h2>
+                        <p>
+    
+                            3GB простор
+                            <br>
+                            1 Домен
+                            <br>
+                            500GB месечен сообраќај
+                            <br>
+                            Неограничено емаил адреси
+                            <br>
+                            Бесплатен сертификат
+                            
+                        </p>
+                        <br>
+                        <button class="buy-button" onclick="buyProduct('product8')">Купи</button>
+                        <button class="like-button" onclick="toggleLike('product8')">Like</button>
+                        <span class="like-count">0</span>
+                        <div class="comment-section">
+                            <textarea class="comment-text" placeholder="Оставете коментар за производот..."></textarea>
+                            <button class="submit-comment" onclick="submitComment('product8')">Коментирај</button>
+                            <div class="comments"></div>
+                        </div>
+                    </div>
+        
+           
+                    <div class="product" id="product9">
+                        <img src="images/vps-large.png" alt="Product 9">
+                        <h2>VPS L</h2>
+                        <p>
+    
+                            3GB простор
+                            <br>
+                            1 Домен
+                            <br>
+                            500GB месечен сообраќај
+                            <br>
+                            Неограничено емаил адреси
+                            <br>
+                            Бесплатен сертификат
+                            
+                        </p>
+                        <br>
+                        <button class="buy-button" onclick="buyProduct('product9')">Купи</button>
+                        <button class="like-button" onclick="toggleLike('product9')">Like</button>
+                        <span class="like-count">0</span>
+                        <div class="comment-section">
+                            <textarea class="comment-text" placeholder="Оставете коментар за производот..."></textarea>
+                            <button class="submit-comment" onclick="submitComment('product9')">Коментирај</button>
+                            <div class="comments"></div>
+                        </div>
+                    </div>
+                </div>
+                <script src="script.js"></script>
+                <div class = "order-form">
+                    <form action="/submit_order" method="post" onsubmit="event.preventDefault(); youBoughtaProduct();">
+                    
+
+                        <fieldset>
+                            <legend>ПРОДАЖБА</legend>
+                            <label for="name">Име и Презиме:</label><br>
+                            <input type="text" id="name" name="name"><br>
+                            <label for="email">Email:</label><br>
+                            <input type="email" id="email" name="email"><br>
+                            <label for="phone">Картичка:</label><br>
+                            <input type="text" id="creditCard" name="creditCard" pattern="[0-9]{16}" placeholder="16-digit card number" class="box" required>
+                            <br>
+                            <label for="address">Адреса:</label><br>
+                            <input type="text" id="expirationDate" name="expirationDate" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" placeholder="MM/YY" class="box" required>
+                            </fieldset>
+                    
+                        <input type="submit" value="Купи">
+                    </form>
+        
+                </div>
+        </main>
+        
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Контакт</h3>
+                    <p>Email: info@matrixhost.info</p>
+                    <p>Телефон: +(389) 71-111-111</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Запратете не</h3>
+                    <a href="https://www.facebook.com/matrixhostingmk" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com/matrixhosting" target="_blank">Instagram</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Адреса</h3>
+                    <p>ул.Партизанска бр.33</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

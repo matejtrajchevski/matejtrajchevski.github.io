@@ -1,0 +1,98 @@
+
+
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Анкета</title>
+        <link rel="stylesheet" href="style5.css">
+
+    </head>
+    <body>
+        <header>
+            <img src="images/logo.png" class="logo-header">
+            <ul class="navbar">
+                <li><a href="index.html">Почетна</a></li>
+                <li><a href="productpage.html">Производи</a>
+                    <ul class="dropdown">
+                        <li><a href="webhost.html">WebHost</a></li>
+                        <li><a href="gamehost.html">GameHost</a></li>
+                        <li><a href="vps.html">VPS</a></li>
+                    </ul>
+                </li>
+                <li><a href="survey.html">Анкета</a></li>
+                <li><a href="contact.html">Контакт</a></li>
+            </ul>
+        </header>
+        <br><br><br><br><br><br><br><br><br>
+        <main>
+            <div class="container-body">
+                <div class="survey-container">
+                    <h1>Анкета за квалитет на услуги</h1>
+                    <form id="digitalProductSurveyForm">
+                        <div class="question">
+                            <label for="age">1. Возраст?</label>
+                            <select id="age" name="age">
+                                <option value="under18">под 18</option>
+                                <option value="18to24">18 - 24</option>
+                                <option value="25to34">25 - 34</option>
+                                <option value="35to44">35 - 44</option>
+                                <option value="45to54">45 - 54</option>
+                                <option value="55andAbove">55 постар</option>
+                            </select>
+                        </div>
+            
+                        <div class="question">
+                            <label for="experience">2. Како би ги оцениле услугите на Matrix Hosting?</label>
+                            <input type="radio" id="novice" name="experience" value="novice">
+                            <label for="novice">Лоши</label>
+                            <input type="radio" id="intermediate" name="experience" value="intermediate">
+                            <label for="intermediate">Добри</label>
+                            <input type="radio" id="expert" name="experience" value="expert">
+                            <label for="expert">Одлични</label>
+                        </div>
+            
+                        <div class="question">
+                            <label for="features">Дали сте задоволни од безбедноста на податоците</label>
+                            <input type="checkbox" id="userFriendly" name="features" value="userFriendly">
+                            <label for="userFriendly">Да</label>
+                            <input type="checkbox" id="innovativeFeatures" name="features" value="innovativeFeatures">
+                            <label for="innovativeFeatures">Не</label>
+                        </div>
+            
+                        <div class="question">
+                            <label for="feedback">Дали имате нешто да предложите?Доколку да, ве молиме изјаснете се.</label>
+                            <textarea id="feedback" name="feedback" rows="4" placeholder="Јас предлагам..."></textarea>
+                        </div>
+            
+                        <button type="button" onclick="submitSurvey()">Испрати</button>
+                    </form>
+                </div>
+            </div>
+        
+            <script src="script.js"></script>
+
+        </main>
+        
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Контакт</h3>
+                    <p>Email: info@matrixhost.info</p>
+                    <p>Телефон: +(389) 71-111-111</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Запратете не</h3>
+                    <a href="https://www.facebook.com/matrixhostingmk" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com/matrixhosting" target="_blank">Instagram</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Адреса</h3>
+                    <p>ул.Партизанска бр.33</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
